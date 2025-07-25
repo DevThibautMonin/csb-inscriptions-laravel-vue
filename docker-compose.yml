@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16
+    container_name: csb-postgres-database
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: csb
+      POSTGRES_USER: csbuser
+      POSTGRES_PASSWORD: csbpassword
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  pgdata:
