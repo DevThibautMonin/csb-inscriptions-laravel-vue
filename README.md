@@ -1,0 +1,1 @@
+# csb-inscriptions-laravel-vue
